@@ -12,7 +12,7 @@ exports.auth = function(req, res) {
 
     User.findOne({email}, function(err, user) {
         if (err) {
-            return res.status(422).send({errors: MongooseHelpers.normalizeErrors(err.errors)});
+            return res.status(422).send({errors: normalizeErrors(err.errors)});
         }
 
         if (!user) {
