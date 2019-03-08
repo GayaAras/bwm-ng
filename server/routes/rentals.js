@@ -41,7 +41,7 @@ router.get('/:id/verify-user', UserCtrl.authMiddleware, function( req, res) {
         return res.status(422).send({errors: [{title: 'Invalid User!', detail: 'You are not the rental owner!'}]});
       }
 
-      return res.json()({status: 'verified'});
+      return res.json({status: 'verified'});
     });
 });
 
