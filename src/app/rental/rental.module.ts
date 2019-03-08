@@ -1,13 +1,14 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 //import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import {CommonModule} from '@angular/common';
-import { Routes, RouterModule} from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { NgPipesModule, UcWordsPipe } from 'ngx-pipes';
 import { MapModule } from '../common/map/map.module';
 import { Daterangepicker } from 'ng2-daterangepicker';
 import { FormsModule } from '@angular/forms';
 import { EditableModule } from '../common/components/editable/editable.module';
+import { ImageUploadModule } from '../common/components/image-upload/image-upload.module';
 
 import { RentalListComponent } from './rental-list/rental-list.component';
 import { RentalListItemComponent } from './rental-list-item/rental-list-item.component';
@@ -60,7 +61,8 @@ const routes: Routes = [
       MapModule,
       Daterangepicker,
       FormsModule,
-      EditableModule
+      EditableModule,
+      ImageUploadModule
     ],
     providers: [
       RentalService, 
